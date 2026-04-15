@@ -2,45 +2,28 @@
 
 旧プロジェクト名: **SoilPhysPy**
 
-このリポジトリは、土壌物理学の授業用資料・課題・コードを整理して管理するためのものです。
+このリポジトリは、土壌物理学の授業用資料・課題・コードをトピック別に整理して管理するためのものです。
 
-## 授業概要
+## トピック構成
 
-土壌物理学に関する講義資料、演習課題、実装コード、Notebookを一元管理し、受講者と開発者の双方が参照しやすい構成を目指します。
+各トピックは英語スラッグのディレクトリ名で管理し、以下のサブディレクトリに分類します。
 
-## 講義一覧
+- `examples/`: Pythonコードや実装例
+- `slides/`: 講義スライドやPDF資料
+- `data/`: 入力データ（`.txt`, `.dat` など）
+- `notebooks/`: Jupyter Notebook
 
-- [講義資料（`docs/lectures/`）](docs/lectures/)
+図版ファイル（`.eps`, `.emf`, `.svg`）はコードと分離し、`docs/references/figures/` に集約しています。
 
-## 課題一覧
+## 現在の主要トピック
 
-- [課題ドキュメント（`docs/assignments/`）](docs/assignments/)
-- [課題実体（`assignments/`）](assignments/)
-
-## コード
-
-- [ソースコード（`src/`）](src/)
-- [サンプルコード（`examples/`）](examples/)
-
-## Notebook
-
-- [Notebook（`notebooks/`）](notebooks/)
-
-## 更新履歴
-
-- [CHANGELOG（`CHANGELOG.md`）](CHANGELOG.md)
-
----
-
-## 利用者別ガイド
-
-### 受講者向け
-
-- `docs/`
-- `slides/`
-- `notebooks/`
-
-### 開発者向け
-
-- `src/`
-- `.github/`
+- `miller-miller/`
+- `poiseuille/`
+- `gas-diffusion/`
+- `travel-time-analysis/`
+- `unsaturated-conductivity/`
+- `water-retention-fitting/`
+- `exercise-2-2/`
+- `exercise-2-3/`
+- `exercises-2-7/`
+- `sedimentation/`
