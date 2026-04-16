@@ -1,12 +1,17 @@
 #PSP_waterRetentionFitting
+
 from __future__ import print_function, division
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+
 try: input = raw_input
 except: pass
 
 import numpy as np
 import matplotlib.pyplot as plt
-from PSP_readDataFile import readDataFile
-from PSP_Marquardt import *
+from soilphysics.io import readDataFile
+from soilphysics.marquardt import *
 
 def main():
     # read experimental values

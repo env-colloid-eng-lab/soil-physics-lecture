@@ -1,6 +1,11 @@
 #PSP_unsaturatedConductivity.py
+
 from __future__ import print_function
-from PSP_readDataFile import readDataFile
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+
+from soilphysics.io import readDataFile
 import matplotlib.pyplot as plt
 import numpy as np
 import math

@@ -1,12 +1,16 @@
 #PSP_travelTimeAnalysis
-from __future__ import print_function, division
 
-from PSP_readDataFile import *
+from __future__ import print_function, division
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+
+
+from soilphysics.io import readDataFile
 from PSP_TTwaterContent import *
 from PSP_TTplot import *
 from PSP_travelTime import computeTravelTime
 
-import sys
 if sys.version_info >= (3,0):
     from tkinter import *                           #3.x
     from tkinter.filedialog import askopenfilename      
