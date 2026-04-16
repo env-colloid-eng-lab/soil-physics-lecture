@@ -3,7 +3,7 @@
 from __future__ import print_function, division
 from pathlib import Path
 import sys
-sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
 from math import exp
 from soilphysics.thomas_algorithm import ThomasBoundaryCondition
