@@ -3,7 +3,9 @@
 from __future__ import print_function, division
 from pathlib import Path
 import sys
-sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+src_path = str(Path(__file__).resolve().parents[2] / "src")
+if src_path not in sys.path:
+    sys.path.insert(0, src_path)
 
 try: input = raw_input
 except: pass
