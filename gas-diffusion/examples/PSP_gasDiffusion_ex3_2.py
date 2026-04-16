@@ -82,11 +82,11 @@ def main():
         z, O2co = gasSolver(boundaryLayerCond[ii], boundaryOxygenConc, dgo2, respRate, totalDepth, n)
         z, CO2co = gasSolver(boundaryLayerCond[ii], boundaryCO2Conc, dgco2, -respRate, totalDepth, n)
       
-        print ("node   depth [m]   O2 conc. [g\m^3]")
+        print ("node   depth [m]   O2 conc. [g/m^3]")
         for i in range(n + 2):
             print ("%3d    %6.2f      %.2f" %(i, z[i], O2co[i]))
 
-        print ("node   depth [m]   CO2 conc. [g\m^3]")
+        print ("node   depth [m]   CO2 conc. [g/m^3]")
         for i in range(n + 2):
             print ("%3d    %6.2f      %.2f" %(i, z[i], CO2co[i]))
 
