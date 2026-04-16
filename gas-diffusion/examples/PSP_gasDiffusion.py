@@ -71,7 +71,7 @@ def main():
     
     z, co = gasSolver(boundaryLayerCond, boundaryOxygenConc, dg, respRate, totalDepth, n)
       
-    print ("node   depth [m]   Co [g\m^3]")
+    print ("node   depth [m]   Co [g/m^3]")
     for i in range(n + 2):
         print ("%3d    %6.2f      %.2f" %(i, z[i], co[i]))
 
