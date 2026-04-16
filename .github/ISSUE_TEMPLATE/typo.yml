@@ -1,0 +1,28 @@
+name: "typo"
+description: "誤植報告"
+title: "[typo] "
+labels:
+  - typo
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: 該当箇所
+      description: ファイルパスやURL、見出し名など
+      placeholder: 例) docs/lecture1.md の 3.2 節
+    validations:
+      required: true
+  - type: textarea
+    id: current_text
+    attributes:
+      label: 現在の表記
+      placeholder: 現在の文言を貼ってください
+    validations:
+      required: true
+  - type: textarea
+    id: expected_text
+    attributes:
+      label: 修正案
+      placeholder: どう直すべきか
+    validations:
+      required: true

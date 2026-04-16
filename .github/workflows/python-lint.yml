@@ -1,0 +1,47 @@
+name: python-lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Basic syntax check (src/, examples/)
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import pathlib
+          import py_compile
+          import sys
+
+          roots = [pathlib.Path('src'), pathlib.Path('examples')]
+          files = []
+          for root in roots:
+            if root.exists():
+              files.extend(root.rglob('*.py'))
+
+          if not files:
+            print('No Python files found under src/ or examples/.')
+            sys.exit(0)
+
+          failed = False
+          for path in files:
+            try:
+              py_compile.compile(str(path), doraise=True)
+            except py_compile.PyCompileError as exc:
+              failed = True
+              print(f'Compile error: {path}\n{exc.msg}')
+
+          if failed:
+            sys.exit(1)
+
+          print(f'Checked {len(files)} file(s).')
+          PY

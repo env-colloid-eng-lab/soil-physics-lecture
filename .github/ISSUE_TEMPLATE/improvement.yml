@@ -1,0 +1,27 @@
+name: "improvement"
+description: "改善要望"
+title: "[improvement] "
+labels:
+  - improvement
+body:
+  - type: textarea
+    id: current_problem
+    attributes:
+      label: 現状の課題
+      description: どこに不便があるか
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 改善提案
+      description: 期待する改善内容
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 影響範囲（任意）
+      placeholder: 例) docs/ と notebooks/ に影響
+    validations:
+      required: false

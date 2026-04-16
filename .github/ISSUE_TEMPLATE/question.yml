@@ -1,0 +1,21 @@
+name: "question"
+description: "質問"
+title: "[question] "
+labels:
+  - question
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 何に困っているかを具体的に記載してください
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景
+      description: 参照したページ、試したこと、実行環境など
+      placeholder: 例) docs/soil-water.md を読んだが式(4)の意味が分からない
+    validations:
+      required: false
