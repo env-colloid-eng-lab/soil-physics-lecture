@@ -17,7 +17,7 @@
 土壌物理学の授業で使う資料・演習・課題・コードを、トピック単位のディレクトリで管理しています。
 
 ### Quick Start（受講者向け）
-- 閲覧のみ: GitHub上で各トピックの `slides/`、`data/`、`docs/references/` を参照。
+- 閲覧のみ: GitHub上で各トピックの `slides/`、`data/` と、リポジトリ直下の `docs/references/` を参照。
 - ローカル実行:
   1. `git clone <this-repo-url>`
   2. `cd soil-physics-lecture`
