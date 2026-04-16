@@ -1,9 +1,8 @@
 #PSP_unsaturatedConductivity.py
+
 from __future__ import print_function
-from PSP_readDataFile import readDataFile
 import matplotlib.pyplot as plt
 import numpy as np
-import math
 
 NODATA = -9999
 

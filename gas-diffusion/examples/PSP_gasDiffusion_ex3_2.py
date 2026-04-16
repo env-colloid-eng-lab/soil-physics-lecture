@@ -1,8 +1,13 @@
 #PSP_gasDiffusion
+
 from __future__ import print_function, division
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+
 from math import exp
-from PSP_ThomasAlgorithm import ThomasBoundaryCondition
-import PSP_grid as grid
+from soilphysics.thomas_algorithm import ThomasBoundaryCondition
+import soilphysics.grid as grid
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -77,11 +82,11 @@ def main():
         z, O2co = gasSolver(boundaryLayerCond[ii], boundaryOxygenConc, dgo2, respRate, totalDepth, n)
         z, CO2co = gasSolver(boundaryLayerCond[ii], boundaryCO2Conc, dgco2, -respRate, totalDepth, n)
       
-        print ("node   depth [m]   O2 conc. [g\m^3]")
+        print ("node   depth [m]   O2 conc. [g/m^3]")
         for i in range(n + 2):
             print ("%3d    %6.2f      %.2f" %(i, z[i], O2co[i]))
 
-        print ("node   depth [m]   CO2 conc. [g\m^3]")
+        print ("node   depth [m]   CO2 conc. [g/m^3]")
         for i in range(n + 2):
             print ("%3d    %6.2f      %.2f" %(i, z[i], CO2co[i]))
 

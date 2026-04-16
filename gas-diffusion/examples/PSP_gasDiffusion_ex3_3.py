@@ -1,8 +1,13 @@
 #PSP_gasDiffusion
+
 from __future__ import print_function, division
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+
 from math import exp
-from PSP_ThomasAlgorithm import ThomasBoundaryCondition
-import PSP_grid as grid
+from soilphysics.thomas_algorithm import ThomasBoundaryCondition
+import soilphysics.grid as grid
 import matplotlib.pyplot as plt
 import numpy as np
 
