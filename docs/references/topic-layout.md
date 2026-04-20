@@ -9,7 +9,7 @@
 - `data/`
 - `notebooks/`
 
-また、`.eps/.emf/.svg` 図版はコードから分離し、`docs/references/figures/`（必要時は `slides/assets/`）へ集約します。
+また、`.eps/.emf/.svg` 図版はコードから分離し、`docs/references/figures/`（必要時は `<topic-slug>/slides/assets/`）へ集約します。
 
 ## Directory rename (`PSP_*` -> educational slug)
 
