@@ -52,4 +52,4 @@
 ### ディレクトリ移行ルール（PSP系章構成）
 - 章ディレクトリは英語スラッグで管理（例: `PSP_travelTimeAnalysis` -> `travel-time-analysis`）。
 - トピック内コンテンツは `examples/`, `slides/`, `data/`, `notebooks/` へ整理。
-- `.eps/.emf/.svg` は `docs/references/figures/`（または `slides/assets/`）へ集約し、コードと分離。
+- `.eps/.emf/.svg` は `docs/references/figures/`（または `<topic-slug>/slides/assets/`）へ集約し、コードと分離。
