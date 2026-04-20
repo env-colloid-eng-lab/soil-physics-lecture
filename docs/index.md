@@ -48,3 +48,8 @@
 ## 更新履歴
 ### 旧名からの移行注記
 旧プロジェクト名は **SoilPhysPy** です。既存の参照・検索互換のため、名称を明示的に残しています。
+
+### ディレクトリ移行ルール（PSP系章構成）
+- 章ディレクトリは英語スラッグで管理（例: `PSP_travelTimeAnalysis` -> `travel-time-analysis`）。
+- トピック内コンテンツは `examples/`, `slides/`, `data/`, `notebooks/` へ整理。
+- `.eps/.emf/.svg` は `docs/references/figures/`（または `<topic-slug>/slides/assets/`）へ集約し、コードと分離。
